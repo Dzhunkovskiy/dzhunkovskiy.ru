@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <form action="" class="search-student-form">
+      <label for="searchName" class="search-student__label">Фамилия, имя или отчество</label>
+      <input type="text" class="search-student-input" id="searchName" placeholder="Иванов" pattern="[A-Za-zА-Яа-яЁё]">
+      <label for="searchFaculty" class="search-student__label">Факультет</label>
+      <input type="text" class="search-student-input" id="searchFaculty" placeholder="Экономики"
+        pattern="[A-Za-zА-Яа-яЁё]">
+      <label for="searchFirstYear" class="search-student__label">Год начала обучения</label>
+      <input type="text" class="search-student-input" id="searchFirstYear" placeholder="2008">
+      <label for="searchLastYear" class="search-student__label">Год окончания обучения</label>
+      <input type="text" class="search-student-input" id="searchLastYear" placeholder="2012">
+    </form>
+
+    <table class="table">
+      <tr class="head-row">
+        <td class="table-heading full-name">ФИО</td>
+        <td class="table-heading faculty">Факультет</td>
+        <td class="table-heading age">ДР и возраст</td>
+        <td class="table-heading studie-years">Годы обучения</td>
+      </tr>
+    </table>
+
+    <form action="" class="new-student-form">
+      <label for="surname" class="new-student__label">Фамилия</label>
+      <input type="text" class="new-student-input" id="surname" placeholder="Иванов" pattern="[A-Za-zА-Яа-яЁё]"
+        required>
+      <label for="name" class="new-student__label">Имя</label>
+      <input type="text" class="new-student-input" id="name" placeholder="Иван" pattern="[A-Za-zА-Яа-яЁё]" required>
+      <label for="middlename" class="new-student__label">Отчество</label>
+      <input type="text" class="new-student-input" id="middlename" placeholder="Иванович" pattern="[A-Za-zА-Яа-яЁё]"
+        required>
+      <label for="faculty" class="new-student__label">Факультет</label>
+      <input type="text" class="new-student-input" id="faculty" placeholder="Экономики" pattern="[A-Za-zА-Яа-яЁё]"
+        required>
+      <label for="birthDate" class="new-student__label">Дата рождения</label>
+      <input type="date" min="1990-01-01" value="1990-01-01" class="new-student-input" id="birthDate" required>
+      <label for="studieYears" class="new-student__label">Год начала обучения</label>
+      <input type="number" min="2000" step="1" value="2018" class="new-student-input" id="studieYears" required>
+      <button type="button" class="add-btn btn">ДОБАВИТЬ СТУДЕНТА</button>
+    </form>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

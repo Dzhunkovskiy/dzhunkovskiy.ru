@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Sprites</title>
+</head>
+
+<body>
+
+  <main class="main">
+
+    <div class="container">
+
+      <section class="hero">
+        <h1 class="hero__heading">Как это работает?</h1>
+        <div class="hero__cards">
+          <div class="hero__card card">
+            <svg width="375" height="288" viewBox="0 0 375 288">
+              <use xlink:href="sprite.svg#coffee"></use>
+            </svg>
+            <h3 class="card__heading">Утренний <span class="card__heading--orange">кофе</span></h3>
+            <p class="card__description description">
+              Кофеин воздействует на центральную нервную систему как природный “будильник”.
+              Поэтому мы быстрее просыпаемся.
+            </p>
+          </div>
+          <div class="hero__card card">
+            <svg width="375" height="288" viewBox="0 0 375 288">
+              <use xlink:href="sprite.svg#meditation"></use>
+            </svg>
+            <h3 class="card__heading">Час <span class="card__heading--orange">медитации</span></h3>
+            <p class="card__description description">
+              После практик оба полушария мозга начинают работать сбалансированно — это привносит порядок в вашу жизнь.
+            </p>
+          </div>
+          <div class="hero__card card">
+            <svg width="375" height="288" viewBox="0 0 375 288">
+              <use xlink:href="sprite.svg#run"></use>
+            </svg>
+            <h3 class="card__heading">Вперёд к <span class="card__heading--orange">свершениям!</span></h3>
+            <p class="card__description description">
+              Ресурсы каждого человека ограничены, поэтому нам необходимо беречь себя и вовремя останавливаться.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="services__left-block">
+          <h2 class="services__heading">Интеграция со сторонними сервисами</h2>
+          <p class="services__description description">
+            Поможет всегда оставаться в курсе всех событий, быть максимально эффективным на протяжении всего рабочего
+            дня,
+            контролировать свои задачи и не опоздать на запланированные встречи.
+          </p>
+        </div>
+        <div class="services__links links">
+          <div class="links-top">
+            <a href="#" class="services__link">
+              <svg class="fb" width="70" height="70" viewBox="0 0 70 70">
+                <use xlink:href="sprite.svg#facebook"></use>
+              </svg>
+            </a>
+            <a href="#" class="services__link">
+              <svg width="70" height="70" viewBox="0 0 70 70">
+                <use xlink:href="sprite.svg#trello"></use>
+              </svg>
+            </a>
+            <a href="#" class="services__link">
+              <svg width="70" height="70" viewBox="0 0 70 70">
+                <use xlink:href="sprite.svg#worklio"></use>
+              </svg>
+            </a>
+            <a href="#" class="services__link">
+              <svg width="70" height="70" viewBox="0 0 70 70">
+                <use xlink:href="sprite.svg#dropbox"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="links-bottom">
+            <a href="#" class="services__link">
+              <svg width="70" height="70" viewBox="0 0 70 70">
+                <use xlink:href="sprite.svg#google"></use>
+              </svg>
+            </a>
+            <a href="#" class="services__link">
+              <svg width="70" height="70" viewBox="0 0 70 70">
+                <use xlink:href="sprite.svg#trelo-plain"></use>
+              </svg>
+            </a>
+            <a href="#" class="services__link">
+              <svg width="70" height="70" viewBox="0 0 70 70">
+                <use xlink:href="sprite.svg#stack"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>

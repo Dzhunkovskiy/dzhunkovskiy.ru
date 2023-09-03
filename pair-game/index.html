@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра в пары</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="game-container">
+    <h1 class="game-heading">Игра в пары</h1>
+    <div class="start-game show">
+      <div class="start-game__menu">
+        <h2 class="start-game__heading">Выберите уровень сложности</h2>
+        <form action="" class="start-game__form">
+          <fieldset class="size-menu">
+            <legend>Размер поля</legend>
+            <input type="radio" name="quantity" id="quantity-1" value="4" class="start-game__size">
+            <label for="quantity-1">2x2</label>
+            <input type="radio" name="quantity" id="quantity-2" value="16" class="start-game__size" checked>
+            <label for="quantity-2">4x4</label>
+            <input type="radio" name="quantity" id="quantity-3" value="36" class="start-game__size">
+            <label for="quantity-3">6x6</label>
+          </fieldset>
+
+          <fieldset class="difficulty-menu">
+            <legend>Уровень сложности</legend>
+            <input type="radio" name="level" id="level-1" value="200" class="start-game__level" checked>
+            <label for="level-1">легко</label>
+            <input type="radio" name="level" id="level-2" value="100" class="start-game__level">
+            <label for="level-2">сложно</label>
+            <input type="radio" name="level" id="level-3" value="60" class="start-game__level">
+            <label for="level-3">очень сложно</label>
+          </fieldset>
+          <button type="button" class="start-game__button">Начать игру</button>
+        </form>
+      </div>
+    </div>
+    <ul class="game-field field-16">
+    </ul>
+    <div class="popup">
+      <div class="restart-menu">
+        <h2 class="popup-heading"></h2>
+        <button class="new-game__button">Сыграть еще раз</button>
+      </div>
+    </div>
+    <div class="game-info">
+      <p class="attempts">Попытки: <span class="attempts-counter">0</span></p>
+      <p class="time-count">Время: <span class="time-counter">0</span></p>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

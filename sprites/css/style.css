@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Open sans";
+  src: url("../fonts/opensans-regular.woff2") format("woff2"),
+    url("../fonts/opensans-regular.woff") format("woff");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open sans";
+  src: url("../fonts/opensans-bold.woff2") format("woff2"),
+    url("../fonts/opensans-bold.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.body {
+  font-family: "Open sans", sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.hero {
+  padding-bottom: 43px;
+  margin-bottom: 24px;
+  text-align: center;
+  background-color: #FFF6ED;
+}
+
+.hero__heading {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
+}
+
+.hero__cards {
+  padding: 0 57px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  max-width: 375px;
+}
+
+.card__heading {
+  padding-top: 18px;
+  padding-bottom: 5px;
+  text-align: left;
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+}
+
+.card__heading--orange {
+  color: #FF7A00;
+}
+
+.description {
+  text-align: left;
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.services {
+  display: flex;
+}
+
+.services__left-block {
+  padding-left: 60px;
+  padding-top: 38px;
+  flex-basis: 50%;
+}
+
+.services__heading {
+  margin-bottom: 10px;
+  font-family: "Open sans", sans-serif;
+  font-size: 40px;
+  line-height: 54px;
+}
+
+.services__description {
+  max-width: 590px;
+}
+
+.services__links {
+  position: relative;
+  overflow: hidden;
+  flex-basis: 50%;
+  padding: 70px 55px 60px 110px;
+}
+
+.services__links::before {
+  content: '';
+  position: absolute;
+  top: -275px;
+  left: 0;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background-color: #FFF6ED;
+  z-index: -1;
+}
+
+.links-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.links-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 70px;
+  padding-right: 92px;
+}
+

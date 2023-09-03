@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css?5v">
+<link rel="shortcut icon" type="image/x-icon" href="img/money.ico">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv = 'pragma' content = 'no-cache'>
+
+<head>
+   <title>Расчет зарплаты</title>
+</head>
+
+<body>
+   <main class="main">
+      <div class="links">
+         <a href="https://dzhunkovskiy.ru/salary/index.html" class="link">По окладу</a>
+         <a href="#" class="link link-active">Почасовой</a>
+      </div>
+      <form class="form">
+         <div class="wrapper">
+            <div class="month-salary-wrapper">
+               <div class="line instruction">Введите ставку за час:</div>
+            </div>
+            <input id="month-salary" type="number" name="month-salary" class="month-salary input"
+               placeholder="например 300" required pattern="[100-1000]">
+               <div class="month-salary-buttons">
+                  <button type="button" class="month-salary-btn save-btn">СОХРАНИТЬ</button>
+                  <button type="button" class="month-salary-btn del-btn">УДАЛИТЬ</button>
+               </div>
+            <div class="line instruction">Введите количество ночных смен:</div>
+            <input id="night-shift" type="number" name="night-shift" class="night-shift input" placeholder="например 8"
+               pattern="[0-31]">
+            <div class="line instruction">Введите количество дневных смен:</div>
+            <input id="day-shift" type="number" name="day-shift" class="day-shift input" placeholder="например 7"
+               pattern="[0-31]">
+            <div class="line instruction">Введите количество праздничных часов:</div>
+            <input id="holyday-hour" type="number" name="holyday-hour" class="holyday-hour input"
+               placeholder="например 4" pattern="0-100">
+         </div>
+         </div>
+         <div class="result display-none">
+            <div class="top-donaters">
+               <h3 class="top-donaters_head">Последние поблагодарившие:</h3>
+                  <ul class="top-donaters_list">
+                     <li class="donater">Анатолий П. - 100р</li>
+                     <li class="donater">Игорь А. - 100р</li>
+                  </ul>
+         </div>
+         <p class="note">
+               * Результат может отличаться от начисления зарплаты за пол-месяца, если ночная смена выпадает на 15-е или последнее число месяца.
+         </p>
+            <div class="line5">РЕЗУЛЬТАТ:</div>
+            <div class="sum">0 Р</div>
+            <div class="donate"><a href="https://www.tinkoff.ru/rm/dzhunkovskiy.fedor1/uU7vz5753/" class="donate-link button">скинуть автору на кофе</a>
+         </div>
+            <button type="button" class="reset button display-none">СБРОСИТЬ</button>
+         </div>
+         <div class="buttons">
+            <button type="button" class="calculate button">РАСЧИТАТЬ</button>
+         </div>
+      </form>
+   </main>
+   <script src="script/hour.js"></script>
+</body>
+
+</html>

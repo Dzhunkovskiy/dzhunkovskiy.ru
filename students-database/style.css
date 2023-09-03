@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  padding: 0;
+  margin: 140px auto 20px;
+  padding: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr:first-child {
+  font-weight: bold;
+}
+
+td {
+  width: 25%;
+  border: 1px solid #333;
+}
+
+.table-heading {
+  cursor: pointer;
+}
+
+.table-heading:hover {
+  background-color: lightyellow;
+}
+
+.table-heading:active {
+  background-color: yellow;
+}
+
+.new-student-form {
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  gap: 10px;
+  background-color: aliceblue;
+}
+
+input {
+  grid-row: 2 / 3;
+  padding: 5px;
+  box-shadow: none;
+}
+
+input[type="date"] {
+  min-width: max-content;
+}
+
+.btn {
+  padding: 10px;
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  max-width: fit-content;
+}
+
+.search-student-form {
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  gap: 10px;
+  background-color: lightyellow;
+}
+
+.alert {
+  border-color: unset;
+  animation: alert 2s ease-in-out;
+  border-color: red;
+}
+
+@keyframes alert {
+  0% {
+    border-color: red;
+  }
+
+  20% {
+    border-color: unset;
+  }
+
+  40% {
+    border-color: red;
+  }
+
+  60% {
+    border-color: unset;
+  }
+
+  80% {
+    border-color: red;
+  }
+
+  100% {
+    border-color: unset;
+  }
+}
+
+@media (max-width: 950px) {
+
+  .new-student-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+  }
+
+  .table {
+    margin-top: 100px;
+  }
+
+}

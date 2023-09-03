@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Студия High pass">
+    <link rel="preload" href="fonts/roboto-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/roboto-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/TTFirsNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/TTFirsNeue-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+    <link rel=" stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>High pass</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header-top__container container"><a href="#" class="header-logo logo"><svg>
+                    <use xlink:href="./images/sprite.svg#logo"></use>
+                </svg></a>
+            <nav class="header-nav nav hide_768">
+                <ul class="header-nav__list nav__list">
+                    <li class="header-nav__item nav__item"><a href="#" class="header-nav__link nav__link">О студии</a>
+                    </li>
+                    <li class="header-nav__item nav__item"><a href="#" class="header-nav__link nav__link">Наши
+                            проекты</a></li>
+                    <li class="header-nav__item nav__item"><a href="#" class="header-nav__link nav__link">Услуги</a>
+                    </li>
+                    <li class="header-nav__item nav__item"><a href="#"
+                            class="header-nav__link nav__link">Мастер-классы</a></li>
+                    <li class="header-nav__item nav__item"><a href="#" class="header-nav__link nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="header-social__list social-list hide_768">
+                <li class="social-list__item"><a href="#" class="social-list__link"><svg width="30" height="30">
+                            <use xlink:href="./images/sprite.svg#ig"></use>
+                        </svg></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link"><svg width="30" height="30">
+                            <use xlink:href="./images/sprite.svg#fb"></use>
+                        </svg></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link"><svg width="30" height="30">
+                            <use xlink:href="./images/sprite.svg#vk"></use>
+                        </svg></a></li>
+            </ul><a href="tel:+749542423532" class="header__phone show_768"><svg width="20" height="20">
+                    <use xlink:href="./images/sprite.svg#phone"></use>
+                </svg> +7 (495) 42-423-532</a>
+            <form class="header-form show_768 top-form" action="https://jsonplaceholder.typicode.com/posts"
+                autocomplete="on" method="POST"><button type="button" class="btn top-form__btn"><svg width="28"
+                        height="28">
+                        <use xlink:href="./images/sprite.svg#search_large"></use>
+                    </svg></button> <input type="text" class="top-form__input" placeholder="Что будем искать?"> <button
+                    class="top-form__btn-close btn-close" type="button"></button></form>
+        </div>
+        <div class="header-bottom__container container">
+            <nav class="header-nav nav show_768 bottom_nav"><button class="nav__btn-close btn-close hide_768"
+                    type="button"></button>
+                <ul class="header-nav__list nav__list">
+                    <li class="header-nav__item nav__item"><a href="#" class="header-nav__link nav__link">О студии</a>
+                    </li>
+                    <li class="header-nav__item nav__item"><a href="#" class="header-nav__link nav__link">Наши
+                            проекты</a></li>
+                    <li class="header-nav__item nav__item"><a href="#" class="header-nav__link nav__link">Услуги</a>
+                    </li>
+                    <li class="header-nav__item nav__item"><a href="#"
+                            class="header-nav__link nav__link">Мастер-классы</a></li>
+                    <li class="header-nav__item nav__item"><a href="#" class="header-nav__link nav__link">Контакты</a>
+                    </li>
+                </ul><a href="tel:+749542423532" class="nav__phone hide_768"><svg width="20" height="18">
+                        <use xlink:href="./images/sprite.svg#phone"></use>
+                    </svg> +7 (495) 42-423-532</a>
+            </nav><button class="burger-btn"><svg width="20" height="20">
+                    <use xlink:href="./images/sprite.svg#burger"></use>
+                </svg></button> <a href="tel:+749542423532" class="header__phone header__phone--small hide_768"><svg
+                    width="20" height="20">
+                    <use xlink:href="./images/sprite.svg#phone"></use>
+                </svg> +7 (495) 42-423-532</a>
+            <form class="header-form hide_768" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on"
+                method="POST"><button type="submit" class="btn header-form__btn"><svg width="28" height="28">
+                        <use xlink:href="./images/sprite.svg#search"></use>
+                    </svg></button> <input type="text" class="header-form__input" placeholder="Что будем искать?">
+            </form>
+        </div>
+    </header>
+    <main class="main">
+        <h1 class="visually-hidden">Главная страница компании High Pass</h1>
+        <div class="hero-wrapper wrapper">
+            <section class="section-hero">
+                <div class="section-hero__poster hero-poster"><a href="#"
+                        class="hero-poster__hashtag hashtag">#мастеркласс</a>
+                    <p class="hero-poster__description">Мастер-класс от Игоря Робова</p>
+                    <h2 class="hero-poster__heading">Неоновый фотосет 2.0 7 июля 20:00</h2><a href=""
+                        class="btn hero-poster__btn btn-orange">Узнать больше</a>
+                </div>
+                <div class="section-hero__examples examples">
+                    <h3 class="examples__heading">Работы участников предыдущего мастер-класса</h3>
+                    <div class="examples__pictures">
+                        <picture class="examples__picture examples__picture-1">
+                            <source media="(min-width: 1025px)" type="image/webp"
+                                srcset="./images/girl-neon_1x.webp, ./images/girl-neon_2x.webp 2x" width="630"
+                                height="300">
+                            <source media="(max-width: 1024px)" type="image/webp"
+                                srcset="./images/girl-neon_large_1x.webp, ./images/girl-neon_large_2x.webp 2x"
+                                width="466" height="332"><img src="./images/girl-neon_1x.jpg"
+                                alt="девушка на фоне неоновой вывески" class="examples__img" width="630" height="300">
+                        </picture>
+                        <picture class="examples__picture examples__picture-2">
+                            <source type="image/webp" srcset="./images/girl_red_1x.webp, ./images/girl_red_2x.webp 2x"
+                                width="300" height="257"><img src="./images/girl_red_1x.jpg"
+                                alt="девушка на фоне неоновой вывески" class="examples__img" width="300" height="257">
+                        </picture>
+                        <picture class="examples__picture examples__picture-3">
+                            <source type="image/webp"
+                                srcset="./images/girl_brunette_1x.webp, ./images/girl_brunette_2x.webp 2x" width="300"
+                                height="257"><img src="./images/girl_brunette_1x.jpg"
+                                alt="девушка на фоне неоновой вывески" class="examples__img" width="300" height="257">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="section-about">
+            <div class="section-about__wrapper wrapper">
+                <h2 class="section-about__heading section-heading">О студии</h2>
+                <div class="section-about__description">
+                    <p class="section-about__description-text section-text">В рамках спецификации современных
+                        стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены
+                        исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная
+                        концепция общественного уклада требует от нас анализа соответствующих условий активизации!
+                        Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость
+                        распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет
+                        широкие возможности для первоочередных требований. Повседневная практика показывает, что
+                        глубокий уровень погружения предполагает независимые способы реализации новых принципов
+                        формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные
+                        признаки институционализации являются только методом политического участия и нарушающими
+                        общечеловеческие нормы этики.</p>
+                </div>
+                <div class="section-about__subsciption">
+                    <div class="section-about__subsciption-pic"></div>
+                    <form class="section-about__form" action="https://jsonplaceholder.typicode.com/posts"
+                        autocomplete="on" method="POST">
+                        <p class="section-about__form-heading">Подписаться на рассылку</p>
+                        <div class="section-about__input-wrapper"><input type="text" class="section-about__input"
+                                placeholder="E-mail" data-validate-field="mail"></div><button type="submit"
+                            class="section-about__btn btn btn-orange">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="projects-wrapper wrapper">
+            <section class="section-projects">
+                <h2 class="section-heading section-projects__heading">Наши проекты</h2>
+                <div class="section-projects__slider">
+                    <div class="section-projects__slide section-projects__slide--1 section-projects__slide--active"
+                        data-target="one">
+                        <ul class="section-projects__list">
+                            <li class="section-projects__item section-projects__item--big card-big card-big--portrait">
+                                <a href="#" class="card-big__hashtag hashtag">#портрет</a>
+                                <p class="card-big__date date">24 февраля</p>
+                                <h3 class="card-big__heading">Спорная точка зрения</h3>
+                                <p class="card-big__text">Ясность нашей позиции очевидна: убеждённость некоторых
+                                    оппонентов</p><button class="btn card-big__btn btn-transparent">О проекте</button>
+                            </li>
+                            <li
+                                class="section-projects__item section-projects__item--small card-small card-small--middle">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_lamp_1x.webp, ./images/projects_lamp_2x.webp 2x"
+                                        width="300" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_lamp_1024_1x.webp, ./images/projects_lamp_1024_2x.webp 2x"
+                                        width="342" height="184"><img src="./images/projects_lamp_1x.jpg"
+                                        alt="китайская лампа" class="projects__img" width="300" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#ретуш</a>
+                                <p class="card-small__text">Идейные соображения высшего порядка, а также убеждённость
+                                    некоторых оппонентов...</p>
+                                <p class="card-small__date date">20 февраля</p>
+                            </li>
+                            <li
+                                class="section-projects__item section-projects__item--small card-small card-small--middle">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_child-monochrome_1x.webp, ./images/projects_child-monochrome_2x.webp 2x"
+                                        width="300" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_child-monochrome_1024_1x.webp, ./images/projects_child-monochrome_1024_2x.webp 2x"
+                                        width="342" height="184"><img src="./images/projects_child-monochrome_1x.jpg"
+                                        alt="черно-белый портрет девочки" class="projects__img" width="300"
+                                        height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#портрет</a>
+                                <p class="card-small__text">Прежде всего, повышение уровня гражданского сознания говорит
+                                    о возможностях приоритизации всякого разного</p>
+                                <p class="card-small__date date">18 февраля</p>
+                            </li>
+                            <li
+                                class="section-projects__item section-projects__item--small card-small card-small--moon hidden_1024">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_moon_1x.webp, ./images/projects_moon_2x.webp 2x"
+                                        width="190" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_moon_1024_1x.webp, ./images/projects_moon_1024_2x.webp 2x"
+                                        width="217" height="184"><img src="./images/projects_moon_1x.jpg"
+                                        alt="луна на ночном небе" class="projects__img" width="190" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#пейзаж</a>
+                                <p class="card-small__text">Равным образом, сложившаяся структура организации всякого
+                                    разного</p>
+                                <p class="card-small__date date">15 февраля</p>
+                            </li>
+                            <li
+                                class="section-projects__item section-projects__item--small card-small card-small--coockie">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_coockie_1x.webp, ./images/projects_coockie_2x.webp 2x"
+                                        width="190" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_coockie_1024_1x.webp, ./images/projects_coockie_1024_2x.webp 2x"
+                                        width="217" height="184"><img src="./images/projects_coockie_1x.jpg"
+                                        alt="разноцветные печеньки" class="projects__img" width="190" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#предмет</a>
+                                <p class="card-small__text">Безусловно, реализация намеченных плановых заданий
+                                    обеспечивает разбор распределения</p>
+                                <p class="card-small__date date">10 февраля</p>
+                            </li>
+                            <li
+                                class="section-projects__item section-projects__item--small card-small card-small--flowers">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_flower_1x.webp, ./images/projects_flower_2x.webp 2x"
+                                        width="190" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_flower_1024_1x.webp, ./images/projects_flower_1024_2x.webp 2x"
+                                        width="217" height="184"><img src="./images/projects_flower_1x.jpg"
+                                        alt="белые цветки" class="projects__img" width="190" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#пейзаж</a>
+                                <p class="card-small__text">Безусловно, курс на социальный национальный проектный опыт
+                                </p>
+                                <p class="card-small__date date">7 февраля</p>
+                            </li>
+                            <li class="section-projects__item section-projects__item--big card-big card-big--jazz"><a
+                                    href="#" class="card-big__hashtag hashtag">#проектджаз</a>
+                                <p class="card-big__date date">2 февраля</p>
+                                <h3 class="card-big__heading">Задания по разработке своевременного</h3>
+                                <p class="card-big__text">Повседневная практика показывает, что сложившаяся структура
+                                    организации играет важную роль</p><button
+                                    class="btn card-big__btn btn-transparent">О проекте</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section-projects__slide section-projects__slide--2" data-target="two">
+                        <ul class="section-projects__list">
+                            <li class="section-projects__item section-projects__item--small card-small">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_nature_1x.webp, ./images/projects_nature_2x.webp 2x"
+                                        width="190" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_nature_1024_1x.webp, ./images/projects_nature_1024_2x.webp 2x"
+                                        width="217" height="184"><img src="./images/projects_nature_1x.jpg"
+                                        alt="горный пейзаж" class="projects__img" width="190" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#пейзаж</a>
+                                <p class="card-small__text">Синтетически, смешаны с не уникальными данными до степени
+                                    всякого разногогогог</p>
+                                <p class="card-small__date date">16 июня</p>
+                            </li>
+                            <li class="section-projects__item section-projects__item--small card-small">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_men_1x.webp, ./images/projects_men_2x.webp 2x"
+                                        width="190" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_men_1024_1x.webp, ./images/projects_men_1024_2x.webp 2x"
+                                        width="217" height="184"><img src="./images/projects_men_1x.jpg"
+                                        alt="горный пейзаж" class="projects__img" width="190" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#портрет</a>
+                                <p class="card-small__text">В своём стремлении улучшить опыт мы упускаем, что явные
+                                    последствия</p>
+                                <p class="card-small__date date">28 мая</p>
+                            </li>
+                            <li class="section-projects__item section-projects__item--small card-small">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_decor_1x.webp, ./images/projects_decor_2x.webp 2x"
+                                        width="190" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_decor_1024_1x.webp, ./images/projects_decor_1024_2x.webp 2x"
+                                        width="217" height="184"><img src="./images/projects_decor_1x.jpg"
+                                        alt="горный пейзаж" class="projects__img" width="190" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#предмет</a>
+                                <p class="card-small__text">Равным образом, высокое качество позиционных...</p>
+                                <p class="card-small__date date">14 мая</p>
+                            </li>
+                            <li class="section-projects__item section-projects__item--small card-small hidden_1080">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_moon_1x.webp, ./images/projects_moon_2x.webp 2x"
+                                        width="190" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_moon_1024_1x.webp, ./images/projects_moon_1024_2x.webp 2x"
+                                        width="217" height="184"><img src="./images/projects_moon_1x.jpg"
+                                        alt="луна на ночном небе" class="projects__img" width="190" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#пейзаж</a>
+                                <p class="card-small__text">Равным образом, сложившаяся структура организации всякого
+                                    разного</p>
+                                <p class="card-small__date date">15 февраля</p>
+                            </li>
+                            <li class="section-projects__item section-projects__item--big card-big card-big--fuji"><a
+                                    href="#" class="card-big__hashtag hashtag">#fuji</a>
+                                <p class="card-big__date date">9 апреля</p>
+                                <h3 class="card-big__heading">Семантический разбор</h3>
+                                <p class="card-big__text">В рамках спецификации современных стандартов, интерактивные
+                                    прототипы</p><button class="btn card-big__btn btn-transparent">О проекте</button>
+                            </li>
+                            <li class="section-projects__item section-projects__item--big card-big card-big--zabvenie">
+                                <a href="#" class="card-big__hashtag hashtag">#проектзабвение</a>
+                                <p class="card-big__date date">20 марта</p>
+                                <h3 class="card-big__heading">Забиение</h3>
+                                <p class="card-big__text">Играет важную роль в формировании глубокомысленных рассуждений
+                                </p><button class="btn card-big__btn btn-transparent">О проекте</button>
+                            </li>
+                            <li
+                                class="section-projects__item section-projects__item--small card-small card-small--middle">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_orange_1x.webp, ./images/projects_orange_2x.webp 2x"
+                                        width="300" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_orange_1024_1x.webp, ./images/projects_orange_1024_2x.webp 2x"
+                                        width="342" height="184"><img src="./images/projects_orange_1x.jpg"
+                                        alt="горный пейзаж" class="projects__img" width="300" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#ретуш</a>
+                                <p class="card-small__text">Как принято считать, многие известные личности и по сей день
+                                    остаются уделом либералов...</p>
+                                <p class="card-small__date date">9 марта</p>
+                            </li>
+                            <li
+                                class="section-projects__item section-projects__item--small card-small card-small--middle">
+                                <picture class="card-small__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/projects_girl_black-white_1x.webp, ./images/projects_girl_black-white_2x.webp 2x"
+                                        width="300" height="184">
+                                    <source media="(max-width:1310px)" type="image/webp"
+                                        srcset="./images/projects_girl_black-white_1024_1x.webp, ./images/projects_girl_black-white_1024_2x.webp 2x"
+                                        width="342" height="184"><img src="./images/projects_girl_black-white_1x.jpg"
+                                        alt="горный пейзаж" class="projects__img" width="300" height="184">
+                                </picture><a href="#" class="card-small__link"></a> <a href="#"
+                                    class="card-small__hashtag hashtag">#портрет</a>
+                                <p class="card-small__text">С учётом сложившейся международной обстановки, новая модель
+                                    организационной...</p>
+                                <p class="card-small__date date">1 марта</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-projects__buttons"><button type="button"
+                        class="btn section-projects__btn btn-reset section-projects__btn--active"
+                        data-path="one">1</button> <button type="button" class="btn section-projects__btn btn-reset"
+                        data-path="two">2</button></div>
+            </section>
+        </div>
+        <div class="section-services-wrapper wrapper">
+            <section class="section-services services">
+                <h2 class="services__heading section-heading">Услуги студии</h2>
+                <div class="services__container">
+                    <div class="services__tabs"><button class="services__tab services__tab--active btn btn-reset"
+                            type="button" data-path="slide-1">Основной перечень</button> <button
+                            class="services__tab btn btn-reset" type="button" data-path="slide-2">Услуги по
+                            ретуши</button></div>
+                    <div class="services__slide services__slide--1 slide active" data-target="slide-1">
+                        <ul class="services__main-list">
+                            <li class="services__item">
+                                <picture class="services__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/service_girl-forrest_1x.webp, ./images/service_girl-forrest_2x.webp 2x"
+                                        width="300" height="140">
+                                    <source media="(max-width:1024px) and (min-width:950px)" type="image/webp"
+                                        srcset="./images/service_girl-forrest_1024_1x.webp, ./images/service_girl-forrest_1024_2x.webp 2x"
+                                        width="218" height="184">
+                                    <source media="(max-width:950px)" type="image/webp"
+                                        srcset="./images/service_girl-forrest_768_1x.webp, ./images/service_girl-forrest_768_2x.webp 2x"
+                                        width="342" height="184"><img class="services__img"
+                                        src="./images/service_girl-forrest_1x.jpg" alt="сервис" width="300"
+                                        height="140">
+                                </picture>
+                                <h3 class="services__name">Высокий уровень вовлечения</h3>
+                                <p class="services__description">Высокий уровень вовлечения представителей целевой
+                                    аудитории является четким доказательством простого факта.</p><a href="#"
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item">
+                                <picture class="services__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/service_weding_1x.webp, ./images/service_weding_2x.webp 2x"
+                                        width="300" height="140">
+                                    <source media="(max-width:1024px) and (min-width:950px)" type="image/webp"
+                                        srcset="./images/service_weding_1024_1x.webp, ./images/service_weding_1024_2x.webp 2x"
+                                        width="218" height="184">
+                                    <source media="(max-width:950px)" type="image/webp"
+                                        srcset="./images/service_weding_768_1x.webp, ./images/service_weding_768_2x.webp 2x"
+                                        width="342" height="184"><img class="services__img"
+                                        src="./images/service_weding_1x.jpg" alt="сервис" width="300" height="140">
+                                </picture>
+                                <h3 class="services__name">Диаграммы связей</h3>
+                                <p class="services__description">Значимость этих проблем настолько очевидна, что
+                                    реализация намеченных плановых заданий влечет за собой процесс.</p><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item">
+                                <picture class="services__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/service_sunset_1x.webp, ./images/service_sunset_2x.webp 2x"
+                                        width="300" height="140">
+                                    <source media="(max-width:1024px) and (min-width:950px)" type="image/webp"
+                                        srcset="./images/service_sunset_1024_1x.webp, ./images/service_sunset_1024_2x.webp 2x"
+                                        width="218" height="184">
+                                    <source media="(max-width:950px)" type="image/webp"
+                                        srcset="./images/service_sunset_768_1x.webp, ./images/service_sunset_768_2x.webp 2x"
+                                        width="342" height="184"><img class="services__img"
+                                        src="./images/service_sunset_1x.jpg" alt="сервис" width="300" height="140">
+                                </picture>
+                                <h3 class="services__name">Высокотехнологичная концепция</h3>
+                                <p class="services__description">В частности, убеждённость некоторых оппонентов
+                                    способствует подготовке и реализации анализа существующих паттернов.</p><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item">
+                                <picture class="services__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/service_plant_1x.webp, ./images/service_plant_2x.webp 2x"
+                                        width="300" height="140">
+                                    <source media="(max-width:1024px) and (min-width:950px)" type="image/webp"
+                                        srcset="./images/service_plant_1024_1x.webp, ./images/service_plant_1024_2x.webp 2x"
+                                        width="218" height="184">
+                                    <source media="(max-width:950px)" type="image/webp"
+                                        srcset="./images/service_plant_768_1x.webp, ./images/service_plant_768_2x.webp 2x"
+                                        width="342" height="184"><img class="services__img"
+                                        src="./images/service_plant_1x.jpg" alt="сервис" width="300" height="140">
+                                </picture>
+                                <h3 class="services__name">Сложившаяся структура организации</h3>
+                                <p class="services__description">Кстати, сторонники тоталитаризма в науке будут
+                                    объединены в целые кластеры себе подобных.</p><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item">
+                                <picture class="services__picture">
+                                    <source media="(min-width:1920px)" type="image/webp"
+                                        srcset="./images/service_kitchen_1x.webp, ./images/service_kitchen_2x.webp 2x"
+                                        width="300" height="140">
+                                    <source media="(max-width:1024px) and (min-width:950px)" type="image/webp"
+                                        srcset="./images/service_kitchen_1024_1x.webp, ./images/service_kitchen_1024_2x.webp 2x"
+                                        width="218" height="184">
+                                    <source media="(max-width:950px)" type="image/webp"
+                                        srcset="./images/service_kitchen_768_1x.webp, ./images/service_kitchen_768_2x.webp 2x"
+                                        width="342" height="184"><img class="services__img"
+                                        src="./images/service_kitchen_1x.jpg" alt="сервис" width="300" height="140">
+                                </picture>
+                                <h3 class="services__name">Внутренние резервы и ресурсы</h3>
+                                <p class="services__description">Банальные, но неопровержимые выводы, а также ключевые
+                                    особенности структуры проекта являются только методом.</p><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="services__slide services__slide--2 slide" data-target="slide-2">
+                        <ul class="services__retouch-list">
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_cactus_1x.webp, ./images/service_cactus_2x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_cactus_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Принимая во внимание показатели</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_dog_1x.webp, ./images/service_dog_2x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_dog_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Таким образом выбранный нами промежуток</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_pillow_1x.webp, ./images/service_pillow_2x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_pillow_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Также как высокое качество товара</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_loop_1x.webp, ./images/service_loop_2x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_loop_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Безусловно, семантический разбор обязателен</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_dark-cloud_1x.webp, ./images/service_dark-cloud_2x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_dark-cloud_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Внезапно, предприниматели в интернете способы</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_cook_1x.webp, ./images/service_cook_2x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_cook_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Есть над чем подумать: активные и пассивные</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_tropic_1x.webp, ./images/service_tropic_2x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_tropic_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Сделаные на базе аналитики выводы говорят</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_canion_1x.webp, ./images/service_canion_1x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_canion_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Как принято считать, сторонники этого</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_deer_1x.webp, ./images/service_deer_2x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_deer_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Задача организации, в особенности</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                            <li class="services__item services__item--small">
+                                <picture class="services__picture">
+                                    <source type="image/webp"
+                                        srcset="./images/service_city_1x.webp, ./images/service_city_2x.webp 2x"
+                                        width="190" height="140"><img class="services__img"
+                                        src="./images/service_city_1x.jpg" alt="сервис" width="190" height="140">
+                                </picture>
+                                <h3 class="services__name">Активно развивающиеся страны зачастую</h3><a href=""
+                                    class="services__link">Подробнее <i class="arrow-stroke"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="services-banner">
+                    <h2 class="services-banner__heading">Акция!</h2>
+                    <h3 class="services-banner__heading--small">Только в июне</h3><img src="./images/discount.png"
+                        alt="скидка 20%" class="services-banner__discount" width="116" height="59">
+                    <p class="services-banner__description">1,5 часа портретной съемки + ретушь 10 снимков</p><a href=""
+                        class="btn btn-orange">Узнать больше</a>
+                </div>
+                <div class="finished-works">
+                    <h3 class="finished-works__heading">Выполненные работы</h3>
+                    <div class="finished__slide-1 finished__slide slide active" data-target="slide-1Fin">
+                        <ul class="finished-works__list finished-works__list-1">
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/1_aside_galery_2_1x.webp, ./images/1_aside_galery_2_2x.webp 2x"
+                                        src="./images/1_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/2_aside_galery_2_1x.webp, ./images/2_aside_galery_2_2x.webp 2x"
+                                        src="./images/2_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/3_aside_galery_2_1x.webp, ./images/3_aside_galery_2_2x.webp 2x"
+                                        src="./images/3_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/4_aside_galery_2_1x.webp, ./images/4_aside_galery_2_2x.webp 2x"
+                                        src="./images/4_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/5_aside_galery_2_1x.webp, ./images/5_aside_galery_2_2x.webp 2x"
+                                        src="./images/5_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/6_aside_galery_2_1x.webp, ./images/6_aside_galery_2_2x.webp 2x"
+                                        src="./images/6_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/7_aside_galery_2_1x.webp, ./images/7_aside_galery_2_2x.webp 2x"
+                                        src="./images/7_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/8_aside_galery_2_1x.webp, ./images/8_aside_galery_2_2x.webp 2x"
+                                        src="./images/8_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/9_aside_galery_2_1x.webp, ./images/9_aside_galery_2_2x.webp 2x"
+                                        src="./images/9_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/10_aside_galery_2_1x.webp, ./images/10_aside_galery_2_2x.webp 2x"
+                                        src="./images/10_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/11_aside_galery_2_1x.webp, ./images/11_aside_galery_2_2x.webp 2x"
+                                        src="./images/11_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/12_aside_galery_2_1x.webp, ./images/12_aside_galery_2_2x.webp 2x"
+                                        src="./images/12_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/13_aside_galery_2_1x.webp, ./images/13_aside_galery_2_2x.webp 2x"
+                                        src="./images/13_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/14_aside_galery_2_1x.webp, ./images/14_aside_galery_2_2x.webp 2x"
+                                        src="./images/14_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/15_aside_galery_2_1x.webp, ./images/15_aside_galery_2_2x.webp 2x"
+                                        src="./images/15_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/16_aside_galery_2_1x.webp, ./images/16_aside_galery_2_2x.webp 2x"
+                                        src="./images/16_aside_galery_2_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                        </ul>
+                    </div>
+                    <div class="finished__slide-2 finished__slide slide" data-target="slide-2Fin">
+                        <ul class="finished-works__list finished-works__list-2">
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/21_aside_galery_1x.webp, ./images/21_aside_galery_2x.webp 2x"
+                                        src="./images/21_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/22_aside_galery_1x.webp, ./images/22_aside_galery_2x.webp 2x"
+                                        src="./images/22_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/23_aside_galery_1x.webp, ./images/23_aside_galery_2x.webp 2x"
+                                        src="./images/23_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/24_aside_galery_1x.webp, ./images/24_aside_galery_2x.webp 2x"
+                                        src="./images/24_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/25_aside_galery_1x.webp, ./images/25_aside_galery_2x.webp 2x"
+                                        src="./images/25_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/26_aside_galery_1x.webp, ./images/26_aside_galery_2x.webp 2x"
+                                        src="./images/26_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/27_aside_galery_1x.webp, ./images/27_aside_galery_2x.webp 2x"
+                                        src="./images/27_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/28_aside_galery_1x.webp, ./images/28_aside_galery_2x.webp 2x"
+                                        src="./images/28_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/29_aside_galery_1x.webp, ./images/29_aside_galery_2x.webp 2x"
+                                        src="./images/29_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/30_aside_galery_1x.webp, ./images/30_aside_galery_2x.webp 2x"
+                                        src="./images/30_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/31_aside_galery_1x.webp, ./images/31_aside_galery_2x.webp 2x"
+                                        src="./images/31_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/32_aside_galery_1x.webp, ./images/32_aside_galery_2x.webp 2x"
+                                        src="./images/32_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/33_aside_galery_1x.webp, ./images/33_aside_galery_2x.webp 2x"
+                                        src="./images/33_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/34_aside_galery_1x.webp, ./images/34_aside_galery_2x.webp 2x"
+                                        src="./images/34_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/35_aside_galery_1x.webp, ./images/35_aside_galery_2x.webp 2x"
+                                        src="./images/35_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                            <li class="finished-works__item"><a class="finished-works__link" href="#"><img
+                                        class="finished-works__img"
+                                        srcset="./images/36_aside_galery_1x.webp, ./images/36_aside_galery_2x.webp 2x"
+                                        src="./images/36_aside_galery_1x.jpg" alt="выполненая работа" width="80"
+                                        height="60"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="section-master-class master-class">
+            <div class="master-class__wrapper wrapper">
+                <h2 class="master-class__heading section-heading">Мастер-классы</h2>
+                <div class="master-class__card">
+                    <div class="master-class__main-picture"></div>
+                    <div class="master-class__card-content">
+                        <div class="master-class__datetime">
+                            <div class="master-class__date date--white">8 июня</div>
+                            <div class="master-class__time time">15:00</div>
+                        </div>
+                        <h3 class="master-class__card-heading">Пленка для начинающих</h3>
+                        <p class="master-class__card-text text">Высокий уровень вовлечения представителей целевой
+                            аудитории является четким доказательством простого факта: семантический разбор внешних
+                            противодействий, в своём классическом представлении.</p><a href="#"
+                            class="btn btn-orange">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="master-class__schedule schedule">
+                    <ul class="schedule__list">
+                        <li class="schedule__item"><img class="schedule__img"
+                                srcset="./images/master_class_retouch_1x.webp, ./images/master_class_retouch_2x.webp 2x"
+                                src="./images/master_class_retouch_1x.jpg" alt="мастер-класс" width="80" height="60">
+                            <div class="schedule__item-content">
+                                <div class="schedule__datetime">
+                                    <div class="schedule__date date--white">9 июня</div>
+                                    <div class="schedule__time time">15:00</div>
+                                </div>
+                                <p class="schedule__text">Ретушь. Продвинутый уровень</p>
+                            </div>
+                        </li>
+                        <li class="schedule__item"><img class="schedule__img"
+                                srcset="./images/master_class_portrait_1x.webp, ./images/master_class_portrait_2x.webp 2x"
+                                src="./images/master_class_portrait_1x.jpg" alt="мастер-класс" width="80" height="60">
+                            <div class="schedule__item-content">
+                                <div class="schedule__datetime">
+                                    <div class="schedule__date date--white">10 июня</div>
+                                    <div class="schedule__time time">16:00</div>
+                                </div>
+                                <p class="schedule__text">Портретная съемка. Свет</p>
+                            </div>
+                        </li>
+                        <li class="schedule__item"><img class="schedule__img"
+                                srcset="./images/master_class_macro_1x.webp, ./images/master_class_macro_2x.webp 2x"
+                                src="./images/master_class_macro_1x.jpg" alt="мастер-класс" width="80" height="60">
+                            <div class="schedule__item-content">
+                                <div class="schedule__datetime">
+                                    <div class="schedule__date date--white">11 июня</div>
+                                    <div class="schedule__time time">16:00</div>
+                                </div>
+                                <p class="schedule__text">Макросъемка. Проблемы и нюансы</p>
+                            </div>
+                        </li>
+                        <li class="schedule__item"><img class="schedule__img"
+                                srcset="./images/master_class_dog_1x.webp, ./images/master_class_dog_2x.webp 2x"
+                                src="./images/master_class_dog_1x.jpg" alt="мастер-класс" width="80" height="60">
+                            <div class="schedule__item-content">
+                                <div class="schedule__datetime">
+                                    <div class="schedule__date date--white">13 июня</div>
+                                    <div class="schedule__time time">18:00</div>
+                                </div>
+                                <p class="schedule__text">Творческая ретушь для начинающих</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="section-contacts__wrapper wrapper">
+            <section class="section-contacts">
+                <h2 class="section-heading section-contacts__heading">Контакты</h2>
+                <div class="section-contacts__block">
+                    <div class="section-contacts__map" id="map"></div>
+                    <div class="section-contacts__info contacts-info"><button class="contacts-info__btn-close btn-close"
+                            type="button"></button>
+                        <div class="contacts-info__wrapper">
+                            <h3 class="contacts-info__heading">Студия “High pass”</h3>
+                            <address class="contacts-info__address">107045, Москва, Даев переулок, дом<br>41,
+                                бизнес-центр «Даев Плаза», этаж 8,<br>офис № 82 <a href="tel:+749542423532"
+                                    class="contacts-info__phone"><svg width="20" height="20">
+                                        <use xlink:href="./images/sprite.svg#phone"></use>
+                                    </svg> +7 (495) 42-423-532</a></address>
+                        </div>
+                    </div>
+                </div>
+                <form class="section-contacts__form contacts-form" action="https://jsonplaceholder.typicode.com/posts"
+                    autocomplete="on" method="POST" enctype="multipart/form-data">
+                    <h3 class="contacts-form__heading">Оставить заявку</h3>
+                    <p class="contacts-form__info">Оставьте ваши данные, указав в графе “Комментарий” желаемые время и
+                        дату съемки или другого мероприятия</p><label for="name"><span class="visually-hidden">укажите
+                            ваше имя</span></label>
+                    <div class="contacts-form__input-wrapper"><input class="contacts-form__input" type="text"
+                            name="name" id="name" required placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]"
+                            data-validate-field="name"></div><label for="email"><span class="visually-hidden">укажите
+                            ваш e-mail</span></label>
+                    <div class="contacts-form__input-wrapper"><input class="contacts-form__input" type="email"
+                            name="email" id="email" required placeholder="E-mail" data-validate-field="mail"></div>
+                    <label for="message"><span class="visually-hidden">напишите сообщение</span></label> <textarea
+                        name="message" id="message" class="contacts-form__message" placeholder="Комментарий"
+                        required></textarea> <button class="btn btn-orange contacts-form__button"
+                        type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper wrapper">
+            <div class="footer-credits credits"><a href="#" class="footer-logo logo"><svg width="190" height="31">
+                        <use xlink:href="./images/sprite.svg#logo"></use>
+                    </svg></a>
+                <p class="credits__text">Фотостудия High pass® 2018-2020</p>
+            </div>
+            <p class="footer__quote quote">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять
+                завтра.<br><span class="quote__author">© Имоджен Каннингем</span></p>
+            <div class="social footer-social">
+                <p class="social__desrcription">Больше интересного:</p>
+                <ul class="social__list">
+                    <li class="social__item"><a href="#" class="social__link"><svg width="30" height="30">
+                                <use xlink:href="./images/sprite.svg#ig"></use>
+                            </svg></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><svg width="30" height="30">
+                                <use xlink:href="./images/sprite.svg#fb"></use>
+                            </svg></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><svg width="30" height="30">
+                                <use xlink:href="./images/sprite.svg#vk"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
