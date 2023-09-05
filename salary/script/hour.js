@@ -8,6 +8,21 @@ var result = document.querySelector(".result");
 var wrapper = document.querySelector(".wrapper");
 var saveBtn = document.querySelector(".save-btn");
 var delBtn = document.querySelector(".del-btn");
+var donList = document.querySelector(".top-donaters_list");
+var dons = donList.querySelectorAll(".donater");
+var style = donList.querySelector(".style")
+var instructionBtn = document.querySelector(".link-instruction")
+var videoInstruction = document.querySelector(".video-instruction")
+var refBtn = document.querySelector(".ref-btn")
+var refFrame = document.querySelector(".ref-frame")
+var closeBtnInst = document.querySelector(".close-btn-inst")
+var closeBtnRef = document.querySelector(".close-btn-ref")
+let donQuant = dons.length
+let donsLength = (donQuant * 30).toString()
+
+var keyFrames = `@keyframes scroll { from { transform: translate(100%, 0); }  to { transform: translate(-${donsLength}%, 0); } } .top-donaters_list {
+  animation: scroll ${donQuant * 2}s linear infinite;}`
+style.innerHTML = keyFrames
 
 var monthSalary;
 var nightShifts;
@@ -63,3 +78,20 @@ calcButton.onclick = function () {
 
   sumScreen.textContent = sum + " Р";
 };
+
+instructionBtn.addEventListener('click', (function() {
+  videoInstruction.classList.remove("display-none")
+}))
+
+closeBtnInst.addEventListener('click', (function() {
+  videoInstruction.classList.add("display-none")
+}))
+
+refBtn.addEventListener('click', (function() {
+  refFrame.classList.remove("display-none")
+}))
+
+closeBtnRef.addEventListener('click', (function() {
+  refFrame.classList.add("display-none")
+}))
+
