@@ -3,8 +3,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local(''), url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
-        url('../fonts/roboto-regular-webfont.woff') format('woff');
+    src: local(''), url('./fonts/roboto-regular-webfont.woff2') format('woff2'),
+        url('./fonts/roboto-regular-webfont.woff') format('woff');
 }
 
 :root {
