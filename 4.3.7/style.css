@@ -19,6 +19,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: var(--font);
 }
 
 *:focus-visible {
@@ -44,7 +45,6 @@ body,
 p {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto';
 }
 
 a {
