@@ -1,4 +1,5 @@
 const pageBody = document.querySelector('.page-body')
+let currData
 
 function createNewElement(tag, ...classes) {
     let newItem = document.createElement(tag)
@@ -51,6 +52,7 @@ async function getData(text) {
             throw new Error('Ошибка соединения')
         }
         const data = await response.json()
+        currData = data
         return data
     } catch (error) {
         alert(error.message)
@@ -58,6 +60,8 @@ async function getData(text) {
 }
 
 async function createOptionList() {
+    let value = input.value.trim()
+    if (!value) return
     try {
         const inData = await getData(input.value)
         if (!inData['items']) {
@@ -78,7 +82,7 @@ async function createOptionList() {
 createOptionList = debounce(createOptionList, 1000)
 
 async function addRepoToList(id, parent) {
-    const inData = await getData(input.value)
+    const inData = currData
     const name = inData['items'][id]['name']
     const owner = inData['items'][id]['owner']['login']
     const stars = inData['items'][id]['stargazers_count']
